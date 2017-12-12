@@ -21,7 +21,6 @@
                 </template>
             </Submenu>
         </template>
-    
     </Menu>
 </template>
 <script>

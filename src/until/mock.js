@@ -1,9 +1,10 @@
 import Mock from 'mockjs';
 import config from '../../config/config.js';
+
 const URI = config.apiDomain;
 
 //图片上传
-Mock.mock(config.imgUpload,{
+Mock.mock(config.imgUpload, {
     "success": true,
     "errors": [],
     "data": {
@@ -25,10 +26,14 @@ Mock.mock(URI + '/rule/uroles', {
     }
 })
 //登陆
-Mock.mock(URI + '/user/login', { "success": true, "errors": [], "data": { "userName": "adminTest", "id": 1, "img": null, "token": "35882fc40f9f2f224cc7486f41676110" } })
+Mock.mock(URI + '/user/login', {
+    "success": true,
+    "errors": [],
+    "data": {"userName": "adminTest", "id": 1, "img": "https://cn.vuejs.org/images/logo.png", "token": "35882fc40f9f2f224cc7486f41676110"}
+})
 
 //单个用户列表用户详细数据
-Mock.mock(URI +'/user/search', {
+Mock.mock(URI + '/user/search', {
     "success": true,
     "errors": [],
     "data": {
@@ -94,13 +99,13 @@ Mock.mock(URI + '/user/info', {
     }
 });
 //删除用户列表用户
-Mock.mock(URI + '/user/delete', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/user/delete', {"success": true, "errors": [], "data": []});
 //更改用户状态
-Mock.mock(URI + '/user/stat', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/user/stat', {"success": true, "errors": [], "data": []});
 //新增用户
-Mock.mock(URI + '/user/add', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/user/add', {"success": true, "errors": [], "data": []});
 //修改用户资料
-Mock.mock(URI + '/user/update', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/user/update', {"success": true, "errors": [], "data": []});
 //添加用户--权限分组
 Mock.mock(URI + '/user/groups', {
     "success": true,
@@ -125,7 +130,7 @@ Mock.mock(URI + '/user/groups', {
     ]
 });
 //修改密码
-Mock.mock(URI + '/user/updatepwd', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/user/updatepwd', {"success": true, "errors": [], "data": []});
 
 //获取权限分组
 Mock.mock(URI + '/rule/gsearch', {
@@ -147,13 +152,13 @@ Mock.mock(URI + '/rule/gsearch', {
     }
 });
 //删除分组
-Mock.mock(URI + '/rule/gdelete', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/rule/gdelete', {"success": true, "errors": [], "data": []});
 //更改分组状态
-Mock.mock(URI + '/rule/stat', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/rule/stat', {"success": true, "errors": [], "data": []});
 //新增分组
-Mock.mock(URI + '/rule/addgroup', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/rule/addgroup', {"success": true, "errors": [], "data": []});
 //修改分组
-Mock.mock(URI + '/rule/groupupdate', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/rule/groupupdate', {"success": true, "errors": [], "data": []});
 //获取分组详情信息
 Mock.mock(URI + '/rule/groupinfo', {
     "success": true,
@@ -302,13 +307,13 @@ Mock.mock(URI + '/brand/lists', {
     }
 });
 //更改品牌状态
-Mock.mock(URI + '/brand/stat', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/brand/stat', {"success": true, "errors": [], "data": []});
 //删除品牌
-Mock.mock(URI + '/brand/delete', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/brand/delete', {"success": true, "errors": [], "data": []});
 //添加品牌
-Mock.mock(URI + '/brand/create', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/brand/create', {"success": true, "errors": [], "data": []});
 //修改品牌
-Mock.mock(URI + '/brand/update', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/brand/update', {"success": true, "errors": [], "data": []});
 //获取品牌详情
 Mock.mock(URI + '/brand/info', {
     "success": true,
@@ -382,9 +387,9 @@ Mock.mock(URI + '/category/lists', {
     ]
 });
 //添加分类
-Mock.mock(URI + '/category/create', { "success": true, "errors": [], "data": { id: 3 } });
+Mock.mock(URI + '/category/create', {"success": true, "errors": [], "data": {id: 3}});
 //修改分类
-Mock.mock(URI + '/category/update', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/category/update', {"success": true, "errors": [], "data": []});
 //获取分类祥情
 Mock.mock(URI + '/category/info', {
     "success": true,
@@ -397,7 +402,7 @@ Mock.mock(URI + '/category/info', {
     }
 });
 //删除分类
-Mock.mock(URI + '/category/delete', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/category/delete', {"success": true, "errors": [], "data": []});
 
 //获取属性模板列表
 Mock.mock(URI + '/attr/list', {
@@ -428,11 +433,11 @@ Mock.mock(URI + '/attr/list', {
 //更改模板状态
 // Mock.mock(URI + '/attr/list', { "success": true, "errors": [], "data": [] });
 //删除属性模板
-Mock.mock(URI + '/attr/delete', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/attr/delete', {"success": true, "errors": [], "data": []});
 //新增属性模板
-Mock.mock(URI + '/attr/create', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/attr/create', {"success": true, "errors": [], "data": []});
 //修改属性模板
-Mock.mock(URI + '/attr/update', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/attr/update', {"success": true, "errors": [], "data": []});
 //获取模板详情
 Mock.mock(URI + '/attr/info', {
     "success": true,
@@ -514,7 +519,7 @@ Mock.mock(URI + '/goods/list', {
     }
 });
 //添加商品
-Mock.mock(URI + '/goods/create', { "success": true, "errors": [], "data": 6 });
+Mock.mock(URI + '/goods/create', {"success": true, "errors": [], "data": 6});
 //商品详情
 Mock.mock(URI + '/goods/info', {
     "success": true,
@@ -603,7 +608,7 @@ Mock.mock(URI + '/goods/info', {
     }
 });
 //修改商品
-Mock.mock(URI + '/goods/update', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/goods/update', {"success": true, "errors": [], "data": []});
 
 //门店列表
 Mock.mock(URI + '/seller/list', {
@@ -662,11 +667,11 @@ Mock.mock(URI + '/seller/info', {
     }
 });
 //修改门店
-Mock.mock(URI + '/seller/update', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/seller/update', {"success": true, "errors": [], "data": []});
 //更改门店状态
-Mock.mock(URI + '/seller/stat', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/seller/stat', {"success": true, "errors": [], "data": []});
 //删除门店
-Mock.mock(URI + '/seller/delete', { "success": true, "errors": [], "data": [] });
+Mock.mock(URI + '/seller/delete', {"success": true, "errors": [], "data": []});
 //地址信息
 Mock.mock(URI + '/seller/area', {
     "success": true,
